@@ -28,3 +28,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Navigate to the build folder
+      run: cd build/libs
+    - name: Start the server
+      run: java -jar sprintBootDemo.jar
