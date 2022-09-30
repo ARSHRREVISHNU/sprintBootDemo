@@ -19,19 +19,18 @@ jobs:
     runs-on: macOs-latest
 
     steps:
-    - name: Checkout the code
-      uses: actions/checkout@v3
-    - name: Set up JDK 18
-      uses: actions/setup-java@v3
-      with:
-        java-version: '18.0.2+101'
-        distribution: 'temurin'
-    - name: Build with Gradle
-      run: ./gradlew build
-    - name: Navigate to the build folder
-      run: cd build/libs/
-    - name: sasmple
-      run: ls
-    - name: Navigating to build folder
-    - name: Start the server
-      run: java -jar sprintBootDemo.jar
+      - name: Checkout the code
+        uses: actions/checkout@v3
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18.0.2+101'
+          distribution: 'temurin'
+      - name: Build with Gradle
+        run: ./gradlew build
+      - name: Navigate to the build folder
+        run: cd build/libs/
+      - name: sasmple
+        run: ls
+      - name: Start the server
+        run: java -jar sprintBootDemo.jar
