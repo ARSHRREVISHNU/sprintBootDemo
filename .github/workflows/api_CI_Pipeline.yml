@@ -31,7 +31,7 @@ jobs:
       - name: Navigate to the build folder
         run: cd build
       - name: Navigate to the libs folder
-        run: cd libs
+        run: ls
       - name: sasmple
         run: ls
       - name: Start the server
